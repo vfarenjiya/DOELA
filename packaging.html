@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Packaging — Packed With Purpose | DOELA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="DOELA Home">
+        <img src="images/logo.png" alt="DOELA" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="packaging.html" class="active">Packaging</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" data-open-search aria-label="Search">⌕</button>
+        <a href="collections.html" class="icon-btn" aria-label="Wishlist">♡<span id="wishCount" class="badge-count">0</span></a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">⛭<span id="cartCount" class="badge-count">0</span></a>
+        <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div id="searchOverlay" class="search-overlay">
+    <button class="search-close" data-close-search aria-label="Close search">✕</button>
+    <div class="search-box">
+      <input type="search" id="searchInput" placeholder="Search sarees, dresses…" autocomplete="off" />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <main>
+        <!-- HERO IMAGE BANNER (clickable) -->
+    <section class="pack-hero-banner">
+      <a href="#whats-inside" aria-label="Discover what's inside DOELA packaging">
+        <img 
+          src="images/packaging/packed-with-purpose-hero.webp" 
+          alt="DOELA Packaging — Packed With Purpose. Every DOELA piece is wrapped with care, intention and a promise to grow kindness." 
+        />
+      </a>
+    </section>
+
+    <!-- THOUGHTFUL IN EVERY DETAIL -->
+    <section class="pack-features container section">
+      <h2 class="section-title">Thoughtful in Every Detail</h2>
+      <p class="section-sub">Small touches that hold big meaning.</p>
+      <div class="pack-feature-grid">
+        <div class="pack-feature">
+          <div class="pack-feature-icon">🧻</div>
+          <h3>Custom Wrapping</h3>
+          <p>Printed with care, wrapped in purpose.</p>
+        </div>
+        <div class="pack-feature">
+          <div class="pack-feature-icon">🎀</div>
+          <h3>Cotton Keepsake Bag</h3>
+          <p>Reusable, timeless, made to treasure.</p>
+        </div>
+        <div class="pack-feature">
+          <div class="pack-feature-icon">🌱</div>
+          <h3>Plantable Seed Card</h3>
+          <p>Embedded with seeds. A gift that grows.</p>
+        </div>
+        <div class="pack-feature">
+          <div class="pack-feature-icon">❖</div>
+          <h3>Signature Seal</h3>
+          <p>A small detail that holds big meaning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S INSIDE (full infographic) -->
+    <section class="pack-infographic container section" id="whats-inside">
+      <h2 class="section-title">What's Inside</h2>
+      <p class="section-sub">Everything that arrives at your door — packed with love.</p>
+      <img
+        src="images/packaging/packed-with-purpose.webp"
+        alt="DOELA packaging: custom wrapping paper, cotton flap bag, plantable seed card, sticker and your DOELA piece, with how-to-plant steps and the unboxing experience"
+        loading="lazy"
+      />
+    </section>
+
+    <!-- HOW TO PLANT YOUR SEED CARD -->
+    <section class="pack-steps container section">
+      <h2 class="section-title">A Thank-You That Blooms</h2>
+      <p class="section-sub">Your card is embedded with seeds. Plant it and watch it grow.</p>
+      <div class="pack-step-grid">
+        <div class="pack-step"><span class="pack-step-num">1</span><div class="pack-step-icon">💧</div><h3>Soak</h3><p>Soak the card in water.</p></div>
+        <div class="pack-step"><span class="pack-step-num">2</span><div class="pack-step-icon">🪴</div><h3>Plant</h3><p>Plant in soil under a thin layer.</p></div>
+        <div class="pack-step"><span class="pack-step-num">3</span><div class="pack-step-icon">🚿</div><h3>Water</h3><p>Water gently every day.</p></div>
+        <div class="pack-step"><span class="pack-step-num">4</span><div class="pack-step-icon">☀️</div><h3>Sunlight</h3><p>Place in warm sunlight.</p></div>
+        <div class="pack-step"><span class="pack-step-num">5</span><div class="pack-step-icon">🌸</div><h3>Bloom</h3><p>Watch it grow &amp; bloom.</p></div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter section">
+      <div class="container">
+        <h2>Become a Part of Our Family</h2>
+        <p>Be the first to know about new collections, special offers, and more.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="newsletter-form">
+          <input type="email" name="email" placeholder="Your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="script" style="margin-top:24px;font-size:1.4rem;">DOELA</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="DOELA Home">
+          <img src="images/logo.png" alt="DOELA" />
+        </a>
+        <p>Built by daughters. Inspired by mother.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="collections.html">New Arrivals</a>
+        <a href="collections.html?cat=sarees">Sarees</a>
+        <a href="collections.html?cat=dresses">Dresses</a>
+        <a href="collections.html?cat=co-ord-sets">Co-ord Sets</a>
+        <a href="collections.html?cat=blouses">Blouses</a>
+        <a href="collections.html?cat=accessories">Accessories</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="our-story.html">Our Story</a>
+        <a href="packaging.html">Shipping Policy</a>
+        <a href="#">Returns &amp; Exchange</a>
+        <a href="#">FAQ</a>
+        <a href="#">Size Guide</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div>
+        <h4>About</h4>
+        <a href="our-story.html">Our Story</a>
+        <a href="our-story.html">Founders</a>
+        <a href="packaging.html">Packaging</a>
+        <a href="#">Testimonials</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="#">Blog</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="#">My Account</a>
+        <a href="#">Orders</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Addresses</a>
+        <a href="#">Rewards</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 DOELA. All rights reserved.</p>
+      <p>Privacy Policy · Terms &amp; Conditions</p>
+      <div class="pay-icons"><span>VISA</span><span>UPI</span><span>RuPay</span></div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS (order per handbook section 2) -->
+  <script defer src="js/store.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

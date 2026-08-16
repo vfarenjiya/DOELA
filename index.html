@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOELA — Timeless Elegance, Made with Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="DOELA Home">
+        <img src="images/logo.png" alt="DOELA" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="packaging.html">Packaging</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" data-open-search aria-label="Search">⌕</button>
+        <a href="collections.html" class="icon-btn" aria-label="Wishlist">♡<span id="wishCount" class="badge-count">0</span></a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">⛭<span id="cartCount" class="badge-count">0</span></a>
+        <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div id="searchOverlay" class="search-overlay">
+    <button class="search-close" data-close-search aria-label="Close search">✕</button>
+    <div class="search-box">
+      <input type="search" id="searchInput" placeholder="Search sarees, dresses…" autocomplete="off" />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- RESPONSIVE VIDEO HERO: landscape desktop / portrait mobile + unmute on mobile -->
+    <section class="home-hero-video" aria-label="DOELA hero video">
+      <div class="home-hero-video-frame">
+        <video
+          id="doelaHeroVideo"
+          class="home-hero-video-player"
+          autoplay
+          muted
+          playsinline
+          loop
+          preload="metadata"
+          poster="images/hero/family.webp"
+        >
+          <source id="doelaHeroSource" src="videos/home-hero-portrait.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button id="doelaHeroSoundBtn" class="hero-unmute-btn" type="button" aria-pressed="false">🔊 Tap for sound</button>
+      </div>
+      <div class="home-hero-video-copy">
+        <p class="eyebrow">01 — 02 — 03</p>
+        <h1>TIMELESS ELEGANCE.<br /><span class="script">Made with Love.</span></h1>
+        <p class="subtitle">Founded by Dolly and brought to life by her twin daughters, Alphonsa &amp; Elizabeth.</p>
+        <div class="hero-btns">
+          <a href="collections.html" class="btn btn-primary">Shop Collection</a>
+          <a href="our-story.html" class="btn btn-outline">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip">
+      <div class="container">
+        <span class="trust-item">✦ Premium Fabrics</span>
+        <span class="trust-item">✦ Made in India</span>
+        <span class="trust-item">✦ Designed with Love</span>
+        <span class="trust-item">✦ Small Batch Production</span>
+        <span class="trust-item">✦ Eco-friendly Packaging</span>
+      </div>
+    </section>
+
+    <!-- COLLECTION CARDS -->
+    <section class="container section">
+      <h2 class="section-title">New Collection ♡</h2>
+      <p class="section-sub">Timeless pieces for every chapter of you.</p>
+      <div class="collection-grid">
+        <a href="collections.html?cat=onam" class="collection-card">
+          <img src="images/collections/onam.webp" alt="Onam Collection" loading="lazy" />
+          <div class="overlay"><h3>ONAM<br/>COLLECTION</h3><span class="btn btn-outline">Shop Now</span></div>
+        </a>
+        <a href="collections.html?cat=festive" class="collection-card">
+          <img src="images/collections/festive.webp" alt="Festive Collection" loading="lazy" />
+          <div class="overlay"><h3>FESTIVE<br/>COLLECTION</h3><span class="btn btn-outline">Shop Now</span></div>
+        </a>
+        <a href="collections.html?cat=everyday" class="collection-card">
+          <img src="images/collections/everyday.webp" alt="Everyday Luxe" loading="lazy" />
+          <div class="overlay"><h3>EVERYDAY<br/>LUXE</h3><span class="btn btn-outline">Shop Now</span></div>
+        </a>
+        <a href="collections.html?cat=wedding" class="collection-card">
+          <img src="images/collections/wedding.webp" alt="Wedding Guest" loading="lazy" />
+          <div class="overlay"><h3>WEDDING<br/>GUEST</h3><span class="btn btn-outline">Shop Now</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="container section" id="bestSellers">
+      <h2 class="section-title">Best Sellers ♡</h2>
+      <p class="section-sub">Loved by our DOELA fam.</p>
+      <div class="product-grid" id="bestSellerGrid"></div>
+      <div style="text-align:center;margin-top:32px;"><a href="collections.html" class="btn btn-outline">View All →</a></div>
+    </section>
+
+    <!-- PACKAGING BANNER -->
+    <section class="banner container section">
+      <img src="images/story/packaging.webp" alt="DOELA packaging" loading="lazy" />
+      <div class="copy">
+        <h2>Wrapped with care</h2>
+        <p>Thoughtful Packaging. Timeless Touch.</p>
+        <p>Every DOELA order is wrapped with love and a promise to grow kindness.</p>
+        <a href="packaging.html" class="btn btn-outline" style="margin-top:18px;">Know More</a>
+      </div>
+    </section>
+
+    <!-- STORY TEASER -->
+    <section class="banner container section" style="background:transparent;">
+      <div class="copy" style="padding:0;">
+        <h2>Our Story</h2>
+        <p>A mother's dream. Her daughters' promise.</p>
+        <p>DOELA is our way of celebrating her strength, love, and everything she sacrificed for us.</p>
+        <a href="our-story.html" class="btn btn-outline" style="margin-top:18px;">Know Our Story</a>
+      </div>
+      <img src="images/story/founders-sketch.webp" alt="Founders sketch" loading="lazy" />
+    </section>
+
+    <!-- UGC ROW -->
+    <section class="container section">
+      <h2 class="section-title">You in DOELA</h2>
+      <p class="section-sub">Tag us @doela.official to get featured.</p>
+      <div class="ugc-row" style="margin-top:28px;">
+        <img src="images/ugc/1.webp" alt="Customer photo" loading="lazy" />
+        <img src="images/ugc/2.webp" alt="Customer photo" loading="lazy" />
+        <img src="images/ugc/3.webp" alt="Customer photo" loading="lazy" />
+        <img src="images/ugc/4.webp" alt="Customer photo" loading="lazy" />
+        <img src="images/ugc/5.webp" alt="Customer photo" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter section">
+      <div class="container">
+        <h2>Become a Part of Our Family</h2>
+        <p>Be the first to know about new collections, special offers, and more.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="newsletter-form">
+          <input type="email" name="email" placeholder="Your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="script" style="margin-top:24px;font-size:1.4rem;">DOELA</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same image logo as Packaging page) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="DOELA Home">
+          <img src="images/logo.png" alt="DOELA" />
+        </a>
+        <p>Built by daughters. Inspired by mother.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="collections.html">New Arrivals</a>
+        <a href="collections.html?cat=sarees">Sarees</a>
+        <a href="collections.html?cat=dresses">Dresses</a>
+        <a href="collections.html?cat=co-ord-sets">Co-ord Sets</a>
+        <a href="collections.html?cat=blouses">Blouses</a>
+        <a href="collections.html?cat=accessories">Accessories</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="our-story.html">Our Story</a>
+        <a href="packaging.html">Shipping Policy</a>
+        <a href="#">Returns &amp; Exchange</a>
+        <a href="#">FAQ</a>
+        <a href="#">Size Guide</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div>
+        <h4>About</h4>
+        <a href="our-story.html">Our Story</a>
+        <a href="our-story.html">Founders</a>
+        <a href="packaging.html">Packaging</a>
+        <a href="#">Testimonials</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="#">Blog</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="#">My Account</a>
+        <a href="#">Orders</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Addresses</a>
+        <a href="#">Rewards</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 DOELA. All rights reserved.</p>
+      <p>Privacy Policy · Terms &amp; Conditions</p>
+      <div class="pay-icons"><span>VISA</span><span>UPI</span><span>RuPay</span></div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS (order per handbook section 2) -->
+  <script defer src="js/store.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/main.js"></script>
+
+  <!-- BEST SELLERS (per handbook appendix C) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof PRODUCTS === "undefined") return;
+      var grid = document.getElementById("bestSellerGrid");
+      if (!grid) return;
+      var best = PRODUCTS.slice().sort(function (a, b) { return b.reviewCount - a.reviewCount; }).slice(0, 5);
+      best.forEach(function (p) {
+        var card = document.createElement("article");
+        card.className = "card";
+        card.innerHTML = '<a href="product.html?id=' + p.id + '">' +
+          '<div class="card-media">' +
+            (p.badge ? '<span class="badge">' + p.badge + '</span>' : '') +
+            '<button class="wish" data-id="' + p.id + '" aria-label="Add to wishlist">♡</button>' +
+            '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy" />' +
+          '</div>' +
+          '<h3>' + p.name + '</h3>' +
+          '<p class="price">₹' + p.price.toLocaleString("en-IN") + '</p>' +
+        '</a>';
+        grid.appendChild(card);
+      });
+      if (typeof paintWishlistHearts === "function") paintWishlistHearts();
+    });
+  </script>
+
+  <!-- RESPONSIVE HERO VIDEO + UNMUTE TOGGLE -->
+  <script>
+    (function () {
+      var video = document.getElementById("doelaHeroVideo");
+      var source = document.getElementById("doelaHeroSource");
+      var btn = document.getElementById("doelaHeroSoundBtn");
+      if (!video || !source || !btn) return;
+
+      var PORTRAIT = "videos/home-hero-portrait.mp4";
+      var LANDSCAPE = "videos/home-hero-landscape.mp4";
+      var BREAKPOINT = 768;
+
+      function setSource() {
+        var wantLandscape = window.innerWidth >= BREAKPOINT;
+        var newSrc = wantLandscape ? LANDSCAPE : PORTRAIT;
+        if (source.getAttribute("src") !== newSrc) {
+          var wasPlaying = !video.paused;
+          var currentTime = video.currentTime;
+          var wasMuted = video.muted;
+          source.setAttribute("src", newSrc);
+          video.load();
+          if (wasPlaying) {
+            video.currentTime = currentTime;
+            video.play().catch(function () {});
+          }
+          video.muted = wasMuted;
+          btn.textContent = wasMuted ? "🔊 Tap for sound" : "🔇 Mute";
+          btn.setAttribute("aria-pressed", wasMuted ? "false" : "true");
+        }
+      }
+
+      setSource();
+      var resizeTimer;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setSource, 150);
+      });
+
+      btn.addEventListener("click", function () {
+        if (video.muted) {
+          video.muted = false;
+          video.play().catch(function () {});
+          btn.textContent = "🔇 Mute";
+          btn.setAttribute("aria-pressed", "true");
+        } else {
+          video.muted = true;
+          btn.textContent = "🔊 Tap for sound";
+          btn.setAttribute("aria-pressed", "false");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
