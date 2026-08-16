@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — DOELA</title>
+  <meta name="description" content="Shop timeless Indian ethnic wear by DOELA — sarees, co-ord sets, dresses and blouses, made in India.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">DOELA</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="collections.html" class="active">Collections</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="packaging.html">Packaging</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" data-open-search aria-label="Search">⌕</button>
+        <a href="#" class="icon-btn" aria-label="Account">♀</a>
+        <a href="collections.html" class="icon-btn" aria-label="Wishlist">♡<span class="badge-count" id="wishCount">0</span></a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">⛭<span class="badge-count" id="cartCount">0</span></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- ============ SEARCH OVERLAY ============ -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" aria-label="Close search">✕</button>
+    <div class="search-box">
+      <input type="search" placeholder="Search sarees, co-ords, dresses…" aria-label="Search products">
+      <div class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- #productRoot lets product.js show a friendly message if ?id= is invalid -->
+  <main id="productRoot" class="container section">
+
+    <p class="eyebrow" style="margin-bottom:24px">
+      <a href="index.html">Home</a> / <a href="collections.html">Collections</a> / <span id="crumb-product">Product</span>
+    </p>
+
+    <div class="product-layout">
+
+      <!-- ---------- GALLERY ---------- -->
+      <div>
+        <div class="gallery-main">
+          <img id="p-main-img" src="" alt="">
+        </div>
+        <div class="gallery-thumbs" id="p-thumbs"><!-- thumbnails injected by product.js --></div>
+      </div>
+
+      <!-- ---------- INFO ---------- -->
+      <div class="product-info">
+        <h1 id="p-name">Loading…</h1>
+
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+          <span class="stars" id="p-stars"></span>
+          <span id="p-rating-text" style="font-size:.85rem;color:var(--muted)"></span>
+        </div>
+
+        <p class="price" id="p-price"></p>
+        <p id="p-desc" style="color:var(--muted)"></p>
+
+        <!-- Color -->
+        <p class="option-label">Color: <span id="p-color-name" style="color:var(--ink);text-transform:capitalize"></span></p>
+        <div class="swatches" id="p-colors"><!-- swatches injected --></div>
+
+        <!-- Size -->
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <p class="option-label" style="margin-bottom:0">Size</p>
+          <a href="#" class="eyebrow" style="color:var(--brown)">Size Guide</a>
+        </div>
+        <div class="size-options" id="p-sizes" style="margin-top:8px"><!-- size buttons injected --></div>
+
+        <!-- Quantity -->
+        <p class="option-label">Quantity</p>
+        <div class="qty">
+          <button id="qty-minus" aria-label="Decrease quantity">−</button>
+          <span id="p-qty">1</span>
+          <button id="qty-plus" aria-label="Increase quantity">+</button>
+        </div>
+
+        <!-- Actions -->
+        <div class="product-actions">
+          <button id="add-to-cart" class="btn btn-primary btn-block">Add to Cart</button>
+          <button id="buy-now" class="btn btn-outline btn-block">Buy Now</button>
+          <button id="p-wish" class="wish btn btn-outline btn-block" data-id="">♡ Add to Wishlist</button>
+        </div>
+        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px">
+          ✦ Pay via your <strong>bank UPI app</strong> for 0% fees · Cards attract a small gateway charge.
+        </p>
+
+        <!-- Accordions (native expand/collapse — no JS needed) -->
+        <div style="margin-top:28px">
+          <details class="accordion">
+            <summary>Description <span>＋</span></summary>
+            <p id="p-desc-full" style="color:var(--muted);padding-bottom:14px"></p>
+          </details>
+          <details class="accordion">
+            <summary>Material &amp; Care <span>＋</span></summary>
+            <p id="acc-material" style="color:var(--muted);padding-bottom:14px"></p>
+          </details>
+          <details class="accordion">
+            <summary>Shipping &amp; Returns <span>＋</span></summary>
+            <p id="acc-shipping" style="color:var(--muted);padding-bottom:14px"></p>
+          </details>
+          <details class="accordion">
+            <summary>Size &amp; Fit <span>＋</span></summary>
+            <p style="color:var(--muted);padding-bottom:14px">Model is 5'7" and wears size S. Garments are cut for a relaxed, graceful drape. When between sizes, size up for ease.</p>
+          </details>
+          <details class="accordion" open>
+            <summary><span id="acc-review-count">Reviews</span> <span>＋</span></summary>
+            <div id="review-list" style="padding-bottom:14px"><!-- reviews injected --></div>
+            <a href="https://forms.gle/REPLACE_ME" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:6px">Write a Review</a>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- YOU MAY ALSO LIKE ---------- -->
+    <section style="margin-top:72px">
+      <h2 class="section-title">You May Also Like</h2>
+      <div class="product-grid related-grid" id="related-grid" style="margin-top:30px"><!-- injected --></div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">DOELA</span>
+          <p style="margin-top:12px;font-size:.85rem;max-width:24ch">Built by daughters. Inspired by mother.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="collections.html">New Arrivals</a>
+          <a href="collections.html?cat=sarees">Sarees</a>
+          <a href="collections.html?cat=dresses">Dresses</a>
+          <a href="collections.html?cat=co-ord-sets">Co-ord Sets</a>
+          <a href="collections.html?cat=blouses">Blouses</a>
+          <a href="collections.html?cat=accessories">Accessories</a>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <a href="our-story.html">Our Story</a>
+          <a href="packaging.html">Shipping Policy</a>
+          <a href="#">Returns &amp; Exchange</a>
+          <a href="#">FAQ</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div>
+          <h4>About</h4>
+          <a href="our-story.html">Our Story</a>
+          <a href="our-story.html">Founders</a>
+          <a href="packaging.html">Packaging</a>
+          <a href="#">Testimonials</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="#">Blog</a>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <a href="#">My Account</a>
+          <a href="#">Orders</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Addresses</a>
+          <a href="#">Rewards</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DOELA. All rights reserved.</span>
+        <span>Privacy Policy · Terms &amp; Conditions</span>
+        <span class="pay-icons"><span>VISA</span><span>UPI</span><span>RuPay</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script defer src="js/store.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/product.js"></script>
+</body>
+</html>

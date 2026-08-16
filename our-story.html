@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — DOELA</title>
+  <meta name="description" content="DOELA was founded by Dolly and brought to life by her twin daughters, Alphonsa and Elizabeth — a mother's dream, her daughters' promise.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">DOELA</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="our-story.html" class="active">Our Story</a>
+        <a href="packaging.html">Packaging</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" data-open-search aria-label="Search">⌕</button>
+        <a href="#" class="icon-btn" aria-label="Account">♀</a>
+        <a href="collections.html" class="icon-btn" aria-label="Wishlist">♡<span class="badge-count" id="wishCount">0</span></a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">⛭<span class="badge-count" id="cartCount">0</span></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- ============ SEARCH OVERLAY ============ -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" aria-label="Close search">✕</button>
+    <div class="search-box">
+      <input type="search" placeholder="Search sarees, co-ords, dresses…" aria-label="Search products">
+      <div class="search-results"></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ STORY HERO ============ -->
+    <section class="story-hero">
+      <p class="eyebrow">Home / Our Story</p>
+      <h1>A MOTHER'S DREAM.<br>HER DAUGHTERS' PROMISE.</h1>
+    </section>
+
+    <!-- ============ NARRATIVE + FAMILY PHOTO ============ -->
+    <section class="section container">
+      <div class="banner">
+        <img src="images/hero/family.webp" alt="Dolly with her twin daughters Alphonsa and Elizabeth" loading="lazy">
+        <div class="copy">
+          <p class="eyebrow">Our Beginning</p>
+          <h2 style="font-size:1.7rem">DOELA began with one woman who quietly made clothes for herself, her sisters, and her daughters — because she believed clothes should carry feeling.</h2>
+          <p style="color:var(--muted)">Today, Dolly and her twin daughters Alphonsa &amp; Elizabeth carry that quiet craft forward — creating timeless pieces that celebrate every woman with elegance, love, and purpose.</p>
+          <a href="collections.html" class="btn btn-primary" style="margin-top:14px">Meet the Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section class="section container" style="text-align:center">
+      <h2 class="section-title">What We Stand For</h2>
+      <p class="section-sub">Five promises in every stitch.</p>
+      <div class="collection-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:36px;gap:30px">
+        <div><h3 style="font-size:1.2rem">Premium Fabrics</h3><p style="color:var(--muted);font-size:.9rem">Hand-picked silks, satins and organzas that drape like a memory.</p></div>
+        <div><h3 style="font-size:1.2rem">Made in India</h3><p style="color:var(--muted);font-size:.9rem">Crafted by skilled artisans, honouring generations of textile heritage.</p></div>
+        <div><h3 style="font-size:1.2rem">Designed with Love</h3><p style="color:var(--muted);font-size:.9rem">Every silhouette begins at our family table, not a trend report.</p></div>
+        <div><h3 style="font-size:1.2rem">Small Batch</h3><p style="color:var(--muted);font-size:.9rem">Limited runs mean your piece stays rare — and our waste stays low.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ MEET THE FOUNDERS ============ -->
+    <section class="section container">
+      <h2 class="section-title">Meet the Founders</h2>
+      <p class="section-sub">One dream, three hands.</p>
+
+      <div class="founders">
+        <div class="founder">
+          <img src="images/founders/dolly.webp" alt="Dolly, Founder of DOELA" loading="lazy">
+          <h3>Dolly</h3>
+          <p class="role">Founder</p>
+          <p style="color:var(--muted);font-size:.9rem">The heart behind DOELA. A woman of strength, love and quiet grace.</p>
+          <p class="sign">Dolly</p>
+        </div>
+        <div class="founder">
+          <img src="images/founders/alphonsa.webp" alt="Alphonsa, Co-Founder of DOELA" loading="lazy">
+          <h3>Alphonsa</h3>
+          <p class="role">Co-Founder</p>
+          <p style="color:var(--muted);font-size:.9rem">Driven by creativity and a vision of modern Indian elegance.</p>
+          <p class="sign">Alphonsa</p>
+        </div>
+        <div class="founder">
+          <img src="images/founders/elizabeth.webp" alt="Elizabeth, Co-Founder of DOELA" loading="lazy">
+          <h3>Elizabeth</h3>
+          <p class="role">Co-Founder</p>
+          <p style="color:var(--muted);font-size:.9rem">The one who turns plans into process — and fabric into feeling.</p>
+          <p class="sign">Elizabeth</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / NEWSLETTER ============ -->
+    <section class="newsletter section">
+      <div class="container">
+        <h2>Join the DOELA Family</h2>
+        <p style="opacity:.8">New collections, private previews, and the stories behind the stitches.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+          <input type="hidden" name="_subject" value="New DOELA subscriber">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">DOELA</span>
+          <p style="margin-top:12px;font-size:.85rem;max-width:24ch">Built by daughters. Inspired by mother.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="collections.html">New Arrivals</a>
+          <a href="collections.html?cat=sarees">Sarees</a>
+          <a href="collections.html?cat=dresses">Dresses</a>
+          <a href="collections.html?cat=co-ord-sets">Co-ord Sets</a>
+          <a href="collections.html?cat=blouses">Blouses</a>
+          <a href="collections.html?cat=accessories">Accessories</a>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <a href="our-story.html">Our Story</a>
+          <a href="packaging.html">Shipping Policy</a>
+          <a href="#">Returns &amp; Exchange</a>
+          <a href="#">FAQ</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div>
+          <h4>About</h4>
+          <a href="our-story.html">Our Story</a>
+          <a href="our-story.html">Founders</a>
+          <a href="packaging.html">Packaging</a>
+          <a href="#">Testimonials</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="#">Blog</a>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <a href="#">My Account</a>
+          <a href="#">Orders</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Addresses</a>
+          <a href="#">Rewards</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DOELA. All rights reserved.</span>
+        <span>Privacy Policy · Terms &amp; Conditions</span>
+        <span class="pay-icons"><span>VISA</span><span>UPI</span><span>RuPay</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS (shared layer only — no page engine needed) ============ -->
+  <script defer src="js/store.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

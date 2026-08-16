@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — DOELA</title>
+  <meta name="description" content="Review your DOELA cart and check out securely via WhatsApp. Pay via UPI for 0% fees.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">DOELA</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="packaging.html">Packaging</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" data-open-search aria-label="Search">⌕</button>
+        <a href="#" class="icon-btn" aria-label="Account">♀</a>
+        <a href="collections.html" class="icon-btn" aria-label="Wishlist">♡<span class="badge-count" id="wishCount">0</span></a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">⛭<span class="badge-count" id="cartCount">0</span></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- ============ SEARCH OVERLAY ============ -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" aria-label="Close search">✕</button>
+    <div class="search-box">
+      <input type="search" placeholder="Search sarees, co-ords, dresses…" aria-label="Search products">
+      <div class="search-results"></div>
+    </div>
+  </div>
+
+  <main class="container section">
+    <p class="eyebrow" style="margin-bottom:24px"><a href="index.html">Home</a> / Your Cart</p>
+    <h1 style="font-size:2rem;letter-spacing:.18em;text-transform:uppercase">Your Cart</h1>
+
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:start;margin-top:24px" class="cart-layout">
+
+      <!-- ---------- LINE ITEMS ---------- -->
+      <div id="cartItems"><!-- filled by checkout.js --></div>
+
+      <!-- ---------- SUMMARY + SHIPPING FORM ---------- -->
+      <div id="cartSummary" style="border-top:1px solid var(--line);padding-top:20px">
+        <div style="display:flex;justify-content:space-between"><span>Subtotal</span><span id="sumSubtotal">₹ 0</span></div>
+        <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Shipping</span><span id="sumShipping">—</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:1.2rem;margin-top:10px"><strong>Total</strong><strong id="sumTotal">₹ 0</strong></div>
+
+        <h4 style="margin-top:24px;font-family:var(--sans);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase">Ship to</h4>
+        <input id="cName"    placeholder="Full name"  style="width:100%;padding:11px;margin-top:8px;border:1px solid var(--line);border-radius:4px;font-family:inherit">
+        <input id="cPhone"   placeholder="Phone (with country code)" style="width:100%;padding:11px;margin-top:8px;border:1px solid var(--line);border-radius:4px;font-family:inherit">
+        <textarea id="cAddress" placeholder="Full address" rows="3" style="width:100%;padding:11px;margin-top:8px;border:1px solid var(--line);border-radius:4px;font-family:inherit"></textarea>
+
+        <button id="checkout-whatsapp" class="btn btn-primary btn-block" style="margin-top:18px">Checkout via WhatsApp</button>
+        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px">
+          We'll confirm availability &amp; share a UPI QR / bank details in the chat.<br>
+          Pay via UPI for 0% fees · No payment is taken on this site.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">DOELA</span>
+          <p style="margin-top:12px;font-size:.85rem;max-width:24ch">Built by daughters. Inspired by mother.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="collections.html">New Arrivals</a>
+          <a href="collections.html?cat=sarees">Sarees</a>
+          <a href="collections.html?cat=dresses">Dresses</a>
+          <a href="collections.html?cat=co-ord-sets">Co-ord Sets</a>
+          <a href="collections.html?cat=blouses">Blouses</a>
+          <a href="collections.html?cat=accessories">Accessories</a>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <a href="our-story.html">Our Story</a>
+          <a href="packaging.html">Shipping Policy</a>
+          <a href="#">Returns &amp; Exchange</a>
+          <a href="#">FAQ</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div>
+          <h4>About</h4>
+          <a href="our-story.html">Our Story</a>
+          <a href="our-story.html">Founders</a>
+          <a href="packaging.html">Packaging</a>
+          <a href="#">Testimonials</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="#">Blog</a>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <a href="#">My Account</a>
+          <a href="#">Orders</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Addresses</a>
+          <a href="#">Rewards</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DOELA. All rights reserved.</span>
+        <span>Privacy Policy · Terms &amp; Conditions</span>
+        <span class="pay-icons"><span>VISA</span><span>UPI</span><span>RuPay</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- small responsive tweak so the cart stacks nicely on phones -->
+  <style>
+    @media (max-width: 820px){ .cart-layout{ grid-template-columns:1fr !important; } }
+  </style>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script defer src="js/store.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/checkout.js"></script>
+</body>
+</html>
